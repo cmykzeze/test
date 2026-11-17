@@ -1,0 +1,11 @@
+{
+  "description": { "translate": "enchantment.lightningstrike.lightning_strike", "color": "#FFE600" },
+  "supported_items": "#minecraft:swords",
+  "weight": 1,
+  "max_level": 5,
+  "min_cost": { "base": 30, "per_level_above_first": 5 },
+  "max_cost": { "base": 50, "per_level_above_first": 10 },
+  "anvil_cost": 8,
+  "slots": ["mainhand"],
+  "effects": {}
+}

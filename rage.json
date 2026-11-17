@@ -1,0 +1,11 @@
+{
+  "description": { "translate": "enchantment.lightningstrike.rage", "color": "#FF7A1A" },
+  "supported_items": "#minecraft:swords",
+  "weight": 2,
+  "max_level": 7,
+  "min_cost": { "base": 20, "per_level_above_first": 6 },
+  "max_cost": { "base": 45, "per_level_above_first": 6 },
+  "anvil_cost": 6,
+  "slots": ["mainhand"],
+  "effects": {}
+}

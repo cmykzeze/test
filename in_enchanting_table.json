@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "lightningstrike:lightning_strike",
+    "lightningstrike:rage",
+    "lightningstrike:frozen_heart",
+    "lightningstrike:bleed",
+    "lightningstrike:shadow_step",
+    "lightningstrike:thunder_clap",
+    "lightningstrike:aftershock"
+  ]
+}

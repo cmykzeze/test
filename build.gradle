@@ -1,0 +1,60 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+	id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+}
+
+// FLAT LAYOUT: all files sit in the repo root, no folders needed.
+sourceSets {
+	main {
+		java {
+			srcDirs = ['.']
+			include '*.java'
+		}
+		resources {
+			srcDirs = []
+		}
+	}
+}
+
+processResources {
+	inputs.property "version", project.version
+
+	from('.') {
+		include 'fabric.mod.json'
+		expand "version": project.version
+	}
+	from('.') {
+		include 'en_us.json'
+		into 'assets/lightningstrike/lang'
+	}
+	from('.') {
+		include 'lightning_strike.json', 'rage.json', 'frozen_heart.json', 'bleed.json', 'shadow_step.json', 'thunder_clap.json', 'aftershock.json'
+		into 'data/lightningstrike/enchantment'
+	}
+	from('.') {
+		include 'in_enchanting_table.json', 'on_random_loot.json', 'non_treasure.json'
+		into 'data/minecraft/tags/enchantment'
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}

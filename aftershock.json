@@ -1,0 +1,11 @@
+{
+  "description": { "translate": "enchantment.lightningstrike.aftershock", "color": "#D98A3D" },
+  "supported_items": "#minecraft:enchantable/mace",
+  "weight": 2,
+  "max_level": 3,
+  "min_cost": { "base": 20, "per_level_above_first": 10 },
+  "max_cost": { "base": 50, "per_level_above_first": 10 },
+  "anvil_cost": 4,
+  "slots": ["mainhand"],
+  "effects": {}
+}

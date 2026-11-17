@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "lightningstrike",
+  "version": "${version}",
+  "name": "Lightning Strike",
+  "description": "Adds the Lightning Strike sword enchantment.",
+  "authors": ["You"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.example.lightningstrike.LightningStrikeMod"],
+    "client": ["com.example.lightningstrike.LightningStrikeClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
